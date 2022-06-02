@@ -108,7 +108,7 @@ main > div {
 /* changes email hover state text */
 
 .email::after{
-  content: "email (hover to reveal";
+  content: "email";
 }
 
 .email:hover::after{
