@@ -1,0 +1,160 @@
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Spacing for Nav Bar */
+
+nav{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  padding: ; 15 15 30 15;
+}
+
+nav a{
+  padding: 15px;
+  text-decoration: none;
+}
+
+nav {
+  padding: 0 0 30px;
+}
+
+
+
+/* Center all h1 & h2 Headings */
+h1, h2 {
+  text-align: center;
+}
+
+
+
+/*removes extra space between elements that creates a gap between sectiosn and background*/
+
+h2, p, hr,ul {
+  margin: 0;
+}
+
+section {
+padding: 20px 20px 40px 20px;
+}
+
+section > div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+h2 {
+  padding: 20px 0;
+}
+
+h3,p {
+  padding: 10px 0;
+  line-height: 1.5em;
+}
+
+/* space line between text */
+li {
+  line-height: 1.5em;
+}
+
+
+/* Center and size the image */
+img {
+  display: block;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+footer > div {
+  text-align: center;
+}
+
+/*Page colors*/
+
+body {
+  background-color: #30332E;
+}
+
+
+.dark{
+  background-color: #FFFBFC;
+}
+
+.light{
+  background-color:#62BBC1;
+}
+
+/* sets main width to 100% */
+main > div {
+  width: 100%;
+}
+
+
+
+
+/* compensates for padding from other sections */
+.contact{
+  padding: 20px;
+}
+
+
+/* changes email hover state text */
+
+.email::after{
+  content: "email (hover to reveal";
+}
+
+.email:hover::after{
+  content: "miles.a.bocianski@gmail.com";
+}
+
+
+
+/* Font Styling */
+
+h1 {
+  color: #FFFBFC;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 40px;
+}
+
+h2 {
+  color:#010400;
+  font-size: 30px;
+  font-family: 'gilroy', sans-serif;
+}
+
+h3, p, li, .contact a:link, .contact a:visited, .contact a:hover, .contact a:active {
+  color:#010400;
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+header a:link, header a:visited, header a:hover, header a:active {
+  color:#FFFBFC;
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* stylize the horizontal rule */
+hr {
+  width: 200px;
+  margin: 5px auto;
+  height: 15px;
+  border: none;
+  background-color: #EC058E;
+  transform: skew(45deg) rotate(15deg);
+  
+}
+
+footer p {
+  color:#FFFBFC;
+  font-size: 15px;
+}
