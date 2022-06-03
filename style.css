@@ -105,15 +105,6 @@ main > div {
 }
 
 
-/* changes email hover state text */
-
-.email::after{
-  content: "email";
-}
-
-.email:hover::after{
-  content: "miles.a.bocianski@gmail.com";
-}
 
 
 
@@ -135,6 +126,7 @@ h3, p, li, .contact a:link, .contact a:visited, .contact a:hover, .contact a:act
   color:#010400;
   font-size: 20px;
   font-family: 'Noto Sans', sans-serif;
+
 }
 
 header a:link, header a:visited, header a:hover, header a:active {
@@ -157,4 +149,13 @@ hr {
 footer p {
   color:#FFFBFC;
   font-size: 15px;
+  
+}
+
+
+
+
+.contact a:hover {
+  font-weight: 600;
+  
 }
