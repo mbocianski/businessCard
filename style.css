@@ -1,170 +1,107 @@
-
-
-html, body {
-  height: 100%;
-  width: 100%;
+/* General Reset and Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Spacing for Nav Bar */
-
-nav{
-  margin-left: auto;
-  margin-right: auto;
-  text-align:center;
-  padding: ; 15 15 30 15;
+/* Root Color Scheme */
+:root {
+    --primary-color: #005f73;   /* Deep teal */
+    --secondary-color: #0a9396; /* Lighter teal */
+    --accent-color: #ca6702;    /* Orange */
+    --light-color: #e9d8a6;     /* Light beige */
+    --dark-color: #94d2bd;      /* Soft teal */
+    --font-color: #283618;      /* Almost black green */
 }
 
-nav a{
-  padding: 15px;
-  text-decoration: none;
-}
-
-nav {
-  padding: 0 0 30px;
-}
-
-
-
-/* Center all h1 & h2 Headings */
-h1, h2 {
-  text-align: center;
-}
-
-
-
-/*removes extra space between elements that creates a gap between sectiosn and background*/
-
-h2, p, hr,ul {
-  margin: 0;
-}
-
-section {
-padding: 20px 20px 40px 20px;
-}
-
-section > div {
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-}
-
-h2 {
-  padding: 20px 0;
-}
-
-h3,p {
-  padding: 10px 0;
-  line-height: 1.5em;
-}
-
-/* space line between text */
-li {
-  line-height: 1.5em;
-}
-
-
-/* Center and size the image */
-img {
-  display: block;
-  padding: 40px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-footer > div {
-  text-align: center;
-}
-
-/*Page colors*/
-
+/* Body and Defaults */
 body {
-  background-color: #30332E;
+    font-family: 'Roboto', sans-serif;
+    color: var(--font-color);
+    line-height: 1.6;
+    padding: 20px;
+    background-color: var(--light-color);
 }
 
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@300;700&display=swap');
 
-.dark{
-  background-color: #FFFBFC;
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    color: var(--dark-color);
+    margin-bottom: 0.5em;
 }
 
-.light{
-  background-color:#62BBC1;
+/* Navigation */
+nav {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
-/* sets main width to 100% */
-main > div {
-  width: 100%;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-
-
-
-/* compensates for padding from other sections */
-.contact{
-  padding: 20px;
+nav a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
 }
 
-
-
-
-
-/* Font Styling */
-
-h1 {
-  color: #FFFBFC;
-  font-family: 'Gilroy', sans-serif;
-  font-size: 40px;
+/* Main layout */
+.main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
 }
 
-h2 {
-  color:#010400;
-  font-size: 30px;
-  font-family: 'gilroy', sans-serif;
+/* Sections */
+section {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-h3, p, li, .contact a:link, .contact a:visited, .contact a:hover, .contact a:active {
-  color:#010400;
-  font-size: 20px;
-  font-family: 'Noto Sans', sans-serif;
-
+/* Buttons and Links */
+button, .button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-header a:link, header a:visited, header a:hover, header a:active {
-  color:#FFFBFC;
-  font-size: 20px;
-  font-family: 'Noto Sans', sans-serif;
+button:hover, .button:hover {
+    background-color: var(--secondary-color);
 }
 
-/* stylize the horizontal rule */
-hr {
-  width: 200px;
-  margin: 5px auto;
-  height: 15px;
-  border: none;
-  background-color: #EC058E;
-  transform: skew(45deg) rotate(15deg);
-  
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
 }
 
-footer p {
-  color:#FFFBFC;
-  font-size: 15px;
-  
-}
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
 
-
-/* Changes contect links font weght on hover */
-
-.contact a:hover {
-  font-weight: 600;
-  
-}
-
-.fade-in-section {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
-
-.fade-in {
-    opacity: 1;
+    nav {
+        font-size: 14px;
+    }
 }
