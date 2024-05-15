@@ -22,6 +22,10 @@ header a {
   color: white;
 }
 
+footer a {
+color: #010400;
+}
+
 h1, h2 {
   text-align: center;
 }
