@@ -25,3 +25,19 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(section);
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const apiKey = 'aa94a2d070e32bdc15798a6c33dad699';
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=Lake%20Forest,US-CA&appid=${apiKey}&units=imperial`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const temp = data.main.temp;
+            const weather = data.weather[0].main;
+            document.getElementById('weather-display').innerHTML = `Lake Forest, CA: ${temp}°C - ${weather}`;
+        })
+        .catch(error => console.error('Error fetching weather:', error));
+});
+
