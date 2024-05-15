@@ -16,6 +16,7 @@ nav a {
   text-decoration: none;
   font-family: 'Poppins', sans-serif; /* Trendy and readable font */
   font-size: 18px; /* Slightly larger to enhance readability */
+  color: white;
 }
 
 h1, h2 {
