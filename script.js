@@ -28,20 +28,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const apiKey = 'aa94a2d070e32bdc15798a6c33dad699'; 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=Lake%20Forest,US-CA&appid=${apiKey}&units=imperial`;
+    const apiKey = 'aa94a2d070e32bdc15798a6c33dad699';
+    // Latitude and longitude for Lake Forest, CA
+    const lat = 33.646944;
+    const lon = -117.686102;
+    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,daily,alerts&appid=${apiKey}&units=imperial`;
 
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error(`HTTP error! Status: ${response.status}`);
             }
             return response.json();
         })
         .then(data => {
-            console.log(data); // Log the data to see what is received
-            const temp = data.main.temp;
-            const weather = data.weather[0].main;
+            const temp = data.current.temp;
+            const weather = data.current.weather[0].description;
             document.getElementById('weather-display').innerHTML = `Lake Forest, CA: ${temp.toFixed(1)}°F - ${weather}`;
         })
         .catch(error => console.error('Error fetching weather:', error));
