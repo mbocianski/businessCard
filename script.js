@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const apiKey = 'aa94a2d070e32bdc15798a6c33dad699';
+    const apiKey = 'dd2aa1835fb9f9096215627b1dc5e07';
     // Latitude and longitude for Lake Forest, CA
     const lat = 33.646944;
     const lon = -117.686102;
