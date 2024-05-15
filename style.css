@@ -1,3 +1,15 @@
+#weather-display {
+    font-family: 'Arial', sans-serif;
+    color: #FFF; /* White text */
+    background-color: #333; /* Dark background for subtlety */
+    padding: 5px;
+    border-radius: 5px;
+    width: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
 html, body {
   height: 100%;
   width: 100%;
