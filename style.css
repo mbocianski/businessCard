@@ -4,40 +4,29 @@ html, body {
 }
 
 /* Spacing for Nav Bar */
-
-nav{
+nav {
   margin-left: auto;
   margin-right: auto;
-  text-align:center;
-  padding: ; 15 15 30 15;
+  text-align: center;
+  padding: 15px 15px 30px; /* Fixed missing unit issue */
 }
 
-nav a{
+nav a {
   padding: 15px;
   text-decoration: none;
 }
 
-nav {
-  padding: 0 0 30px;
-}
-
-
-
-/* Center all h1 & h2 Headings */
 h1, h2 {
   text-align: center;
 }
 
-
-
-/*removes extra space between elements that creates a gap between sectiosn and background*/
-
-h2, p, hr,ul {
+/* Removes extra space between elements that creates a gap between sections and background */
+h2, p, hr, ul {
   margin: 0;
 }
 
 section {
-padding: 20px 20px 40px 20px;
+  padding: 20px;
 }
 
 section > div {
@@ -50,63 +39,47 @@ h2 {
   padding: 20px 0;
 }
 
-h3,p {
+h3, p {
   padding: 10px 0;
   line-height: 1.5em;
 }
 
-/* space line between text */
 li {
   line-height: 1.5em;
 }
 
-
-/* Center and size the image */
 img {
   display: block;
   padding: 40px;
   margin-left: auto;
   margin-right: auto;
+  width: 80%; /* Make images responsive */
+  max-width: 600px; /* Limit maximum size */
 }
-
 
 footer > div {
   text-align: center;
 }
 
-/*Page colors*/
-
 body {
   background-color: #30332E;
 }
 
-
-.dark{
+.dark {
   background-color: #FFFBFC;
 }
 
-.light{
-  background-color:#62BBC1;
+.light {
+  background-color: #62BBC1;
 }
 
-/* sets main width to 100% */
 main > div {
   width: 100%;
 }
 
-
-
-
-/* compensates for padding from other sections */
-.contact{
+.contact {
   padding: 20px;
 }
-
-
-
-
-
-/* Font Styling */
 
 h1 {
   color: #FFFBFC;
@@ -115,25 +88,23 @@ h1 {
 }
 
 h2 {
-  color:#010400;
+  color: #010400;
   font-size: 30px;
-  font-family: 'gilroy', sans-serif;
+  font-family: 'Gilroy', sans-serif;
 }
 
 h3, p, li, .contact a:link, .contact a:visited, .contact a:hover, .contact a:active {
-  color:#010400;
+  color: #010400;
   font-size: 20px;
   font-family: 'Noto Sans', sans-serif;
-
 }
 
 header a:link, header a:visited, header a:hover, header a:active {
-  color:#FFFBFC;
+  color: #FFFBFC;
   font-size: 20px;
   font-family: 'Noto Sans', sans-serif;
 }
 
-/* stylize the horizontal rule */
 hr {
   width: 200px;
   margin: 5px auto;
@@ -141,28 +112,59 @@ hr {
   border: none;
   background-color: #EC058E;
   transform: skew(45deg) rotate(15deg);
-
 }
 
 footer p {
-  color:#FFFBFC;
+  color: #FFFBFC;
   font-size: 15px;
-
 }
-
-
-/* Changes contect links font weght on hover */
 
 .contact a:hover {
   font-weight: 600;
-
 }
 
 .fade-in-section {
-    opacity: 0;
-    transition: opacity 1s ease-out;
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
 .fade-in {
-    opacity: 1;
+  opacity: 1;
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+  nav a, h1, h2, h3, p, li {
+    padding: 10px;
+  }
+
+  section > div, img {
+    width: 90%;
+  }
+
+  hr {
+    width: 100px; /* Smaller horizontal rule */
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px 0;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p, h3, .contact a, header a {
+    font-size: 16px;
+  }
+
+  img {
+    padding: 20px 0;
+  }
 }
