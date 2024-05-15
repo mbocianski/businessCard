@@ -1,33 +1,28 @@
-
-
-
 html, body {
   height: 100%;
   width: 100%;
 }
 
-/* Enhanced Spacing for Nav Bar */
+/* Spacing for Nav Bar */
 nav {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding: 20px 20px 35px; /* Slightly increased padding */
+  padding: 20px 20px 35px; /* Updated padding for better spacing */
 }
 
 nav a {
   padding: 20px;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif; /* Trendy font */
-  font-size: 18px; /* Slightly larger */
-  font-weight: 500; /* Medium weight */
-  color: #f0f0f0; /* Lighter color for readability */
+  font-family: 'Poppins', sans-serif; /* Trendy and readable font */
+  font-size: 18px; /* Slightly larger to enhance readability */
 }
 
 h1, h2 {
   text-align: center;
 }
 
-/* Modernized element spacing */
+/* Removes extra space between elements */
 h2, p, hr, ul {
   margin: 0;
 }
@@ -39,38 +34,34 @@ section {
 section > div {
   margin-left: auto;
   margin-right: auto;
-  width: 80%; /* Increased width for better readability */
+  width: 80%; /* Increased width for better layout */
 }
 
 h1 {
-  padding: 25px 0;
   color: #FFFBFC;
-  font-family: 'Montserrat', sans-serif; /* Stylish, bold font */
-  font-size: 48px; /* Larger for more impact */
+  font-family: 'Montserrat', sans-serif; /* Bold and stylish font */
+  font-size: 48px; /* Larger for impact */
+  margin-bottom: 10px; /* Added space below heading */
 }
 
 h2 {
   color: #010400;
+  font-size: 36px; /* Larger for clear titles */
   font-family: 'Montserrat', sans-serif;
-  font-size: 36px; /* Larger for clear section titles */
-  padding: 25px 0;
+  margin-bottom: 10px; /* Added space below subtitle */
 }
 
-h3, p {
-  padding: 15px 0;
-  line-height: 1.8em; /* Improved line spacing */
-  font-family: 'Poppins', sans-serif;
-  color: #3A3A3A; /* Darker for better contrast */
-}
-
-li {
-  line-height: 1.8em;
-  font-size: 18px; /* Larger for readability */
+h3, p, li {
+  font-family: 'Roboto', sans-serif; /* Clear and modern font */
+  color: #333333; /* Darker for better readability */
+  font-size: 18px; /* Optimized text size */
+  padding: 15px 0; /* Adjusted padding for better spacing */
+  line-height: 1.8; /* Improved line height for readability */
 }
 
 img {
   display: block;
-  padding: 50px; /* More spacing around images */
+  padding: 50px;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -81,69 +72,86 @@ footer > div {
   text-align: center;
 }
 
+body {
+  background-color: #30332E; /* Dark background for contrast */
+}
+
 .dark {
-  background-color: #2C2F33; /* Slightly darker for modern look */
+  background-color: #FFFBFC; /* Light background for dark mode sections */
 }
 
 .light {
-  background-color: #6F7781; 
+  background-color: #62BBC1; /* Calm blue for light sections */
 }
 
-.main {
+main > div {
   width: 100%;
 }
 
 .contact {
-  padding: 25px; /* More padding for better separation */
+  padding: 25px; /* More padding for contact section */
 }
 
 hr {
-  width: 250px; /* Wider for bold separation */
+  width: 250px; /* Wider for a bold statement */
   margin: 10px auto;
-  height: 10px; /* Thinner for sleek appearance */
+  height: 10px; /* Thinner for a modern look */
   border: none;
-  background-color: #FF2255; /* Vibrant color */
-  transform: skew(-10deg) rotate(5deg); /* Subtle skew for dynamism */
+  background-color: #EC058E; /* Vibrant color */
+  transform: skew(-10deg) rotate(5deg); /* Subtle, modern skew */
 }
 
 footer p {
-  color: #E0E0E0; /* Lighter grey for footer readability */
-  font-size: 18px; /* Larger for better readability */
+  color: #E0E0E0; /* Light grey for visibility */
+  font-size: 18px; /* Slightly larger for better readability */
 }
 
-/* Media Queries*/
+.contact a:hover {
+  font-weight: 600; /* Bold on hover for emphasis */
+}
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/* Media Queries for Responsive Adjustments */
 @media (max-width: 768px) {
   nav a, h1, h2, h3, p, li {
-    padding: 15px;
+    padding: 15px; /* Adjusted padding for smaller screens */
   }
 
   section > div, img {
-    width: 95%;
+    width: 95%; /* More responsive width adjustment */
   }
 
   hr {
-    width: 150px; /* Adjusted for smaller screens */
+    width: 150px; /* Smaller horizontal rule for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   nav {
-    padding: 15px 0;
+    padding: 15px 0; /* Less vertical padding on very small screens */
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 28px; /* Smaller font size for very small screens */
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 24px; /* Adjusted subtitle size for clarity */
   }
 
   p, h3, .contact a, header a {
-    font-size: 16px;
+    font-size: 16px; /* Smaller font size for compact display */
   }
 
   img {
-    padding: 30px 0;
+    padding: 30px 0; /* Reduced padding around images */
   }
 }
